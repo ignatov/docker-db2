@@ -4,5 +4,6 @@ RUN useradd guest
 RUN echo "guest:guest" | chpasswd
 
 COPY entrypoint.sh /
+COPY init.sql /
 
 ENTRYPOINT ["/entrypoint.sh"]
