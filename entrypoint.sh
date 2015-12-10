@@ -1,7 +1,6 @@
 #!/bin/sh
 su - db2inst1 -c "
 db2start && \
-db2 create database guest && \
-db2 connect to guest user guest using guest"
-
+db2 -td@ -f /init.sql
+"
 tail -f /dev/null
